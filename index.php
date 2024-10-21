@@ -29,33 +29,94 @@
 
 
 // Function to determine the grade based on the score
-function getGrade($score) {
-    if ($score >= 90 && $score <= 100) {
-        return 'A';
-    } elseif ($score >= 80 && $score <= 89) {
-        return 'B';
-    } elseif ($score >= 78 && $score <= 79) {
-        return 'C';
-    } elseif ($score >= 60 && $score <= 69) {
-        return 'D';
-    } else {
-        return 'F';
-    }
-}
+// function getGrade($score) {
+ //    if ($score >= 90 && $score <= 100) {
+ //        return 'A';
+ //    } elseif ($score >= 80 && $score <= 89) {
+  //       return 'B';
+  //   } elseif ($score >= 78 && $score <= 79) {
+  //       return 'C';
+  //   } elseif ($score >= 60 && $score <= 69) {
+  //       return 'D';
+  //   } else {
+  //       return 'F';
+  //   }
+// }
 
 // Get the student's score from user input
-echo "Enter the student's score: ";
-$handle = fopen("php://stdin", "r"); // Open the standard input stream
-$score = trim(fgets($handle)); // Read input from the console
-fclose($handle); // Close the stream
+// echo "Enter the student's score: ";
+// $handle = fopen("php://stdin", "r"); // Open the standard input stream
+// $score = trim(fgets($handle)); // Read input from the console
+// fclose($handle); // Close the stream
 
 // Validate the input to ensure it's a number
-if (is_numeric($score) && $score >= 0 && $score <= 100) {
+// if (is_numeric($score) && $score >= 0 && $score <= 100) {
     // Get the grade
-    $grade = getGrade($score);
+ //    $grade = getGrade($score);
     // Output the grade
-    echo "The student's grade is: $grade\n";
+    // echo "The student's grade is: $grade\n";
+// } else {
+ //    echo "Invalid score. Please enter a number between 0 and 100.\n";
+// }
+
+
+$age = 14; 
+
+if ($age < 15) {
+    echo "You're too young.";
 } else {
-    echo "Invalid score. Please enter a number between 0 and 100.\n";
+    echo "You're old enough.";
 }
+
+
+
+
+$age = 16; 
+
+if ($age >= 15 && $age < 18) {
+    echo "You're eligible.";
+} else {
+    echo "You're not eligible.";
+}
+
+
+
+$age = 20; // Change this value to test different ages
+
+if ($age > 18) {
+    echo "You're too old.";
+} else {
+    echo "You're not too old.";
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
