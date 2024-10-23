@@ -60,34 +60,49 @@
 // }
 
 
-$age = 14; 
+// $age = 14; 
 
-if ($age < 15) {
-    echo "You're too young.";
-} else {
-    echo "You're old enough.";
-}
-
-
-
-
-$age = 16; 
-
-if ($age >= 15 && $age < 18) {
-    echo "You're eligible.";
-} else {
-    echo "You're not eligible.";
-}
+// if ($age < 15) {
+ //    echo "You're too young.";
+// } else {
+ //    echo "You're old enough.";
+// }
 
 
 
-$age = 20; // Change this value to test different ages
 
-if ($age > 18) {
-    echo "You're too old.";
-} else {
-    echo "You're not too old.";
-}
+// $age = 16; 
+
+// if ($age >= 15 && $age < 18) {
+ //    echo "You're eligible.";
+// } else {
+ //    echo "You're not eligible.";
+// }
+
+
+
+// $age = 20; // Change this value to test different ages
+
+// if ($age > 18) {
+  //   echo "You're too old.";
+// } else {
+ //    echo "You're not too old.";
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 
 
