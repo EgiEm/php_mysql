@@ -27,21 +27,20 @@ $sm3 = addNumbers(34,55)
 
 
 
-function maxNumbers($num1, $num2, $max){
-    if ($num1 < 5) {
+function maxNumbers($num1, $num2, ){
+    if ($num1 < 15) {
       
         if ($num1 > $num2) {
-            return "$num1 is greater than $num2 and both are less than $max.";
+            return "$num1 is greater than $num2 and both are less than.";
         } elseif ($num1 < $num2) {
-            return "$num2 is greater than $num1 and both are less than $max.";
+            return "$num2 is greater than $num1 and both are less than.";
         } else {
-            return "$num1 is equal to $num2 and both are less than $max.";
+            return "$num1 is equal to $num2 and both are less than.";
         }
     } else {
-        return "One or both numbers exceed the maximum limit of $max.";
+        return "One or both numbers exceed the maximum limit of.";
     }
 }
-
 
 echo compareNumbers(5, 10, 15); 
 
