@@ -91,45 +91,76 @@
 
 
 
-$arrays = array(
-  array(1,2,3),
-  array(1,2,3),
-  array(1,2,3)
-);
+//$arrays = array(
+  //array(1,2,3),
+ // array(1,2,3),
+ // array(1,2,3)
+//);
 
-for($i = 0; $i < 4; $i++){
-  for($j = 1; $j < 4; $j++){
-    echo "Array: $i Element: $j <br>";
-  }
-}
-?>
-
+//for($i = 0; $i < 4; $i++){
+ // for($j = 1; $j < 4; $j++){
+  //  echo "Array: $i Element: $j <br>";
+  //}
+//}
 
 
+//for($i=1; $i<5; $i++){
+ // for($j=1; $j<=$i; $j++){
+  //  echo "*";
+ // }
+  //echo "<br>";
 
 
+//  $grade = array(
+ //   "math" => "3",
+  //  "art" => "5",
+   // "history" => "4",
+  //  "music" => "4",
+ // );
+ // echo "math grade is ".$grade['math'];
+
+  //
+
+//  foreach($grade as $subject => $grade){
+ //   echo "Subject: ".$subject . " / grade: ".$grade;
+  //  echo "<br>";
+ // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ function writeToFile($message){
+     $file = fopen("example.txt", "a");
+ 
+     if($file){
+         fwrite($file, $message.PHP_EOL);
+ 
+         fclose($file);
+ 
+         echo "Message written to the file successfully!<br>";
+     }else{
+         echo "Failed to open the file for writting!!<br>";
+     }
+ }
+ 
+ function readFromFile(){
+     $file = fopen("example.txt", "r");
+ 
+     if($file){
+     echo "<strong> of the example </strong>";
+ 
+     while(!feof($file)){
+         $line = fgets($file);
+         echo $line. "<br>";
+     }
+     fclose($file);
+ }else{
+     echo "Failed to open the file!!<br>";
+ }
+ 
+ }
+ 
+ writeToFile("This is a a simple log message");
+ readFromFile();
+ 
 
 
 
