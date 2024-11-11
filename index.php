@@ -127,41 +127,88 @@
  // }
 
 
- function writeToFile($message){
-     $file = fopen("example.txt", "a");
+  //function writeToFile($message){
+    //  $file = fopen("example.txt", "a");
  
-     if($file){
-         fwrite($file, $message.PHP_EOL);
+ //     if($file){
+   //       fwrite($file, $message.PHP_EOL);
  
-         fclose($file);
+ //         fclose($file);
  
-         echo "Message written to the file successfully!<br>";
-     }else{
-         echo "Failed to open the file for writting!!<br>";
-     }
- }
+ //         echo "Message written to the file successfully!<br>";
+   //   }else{
+     //     echo "Failed to open the file for writting!!<br>";
+      //}
+ // }
  
- function readFromFile(){
-     $file = fopen("example.txt", "r");
+ // function readFromFile(){
+    //  $file = fopen("example.txt", "r");
  
-     if($file){
-     echo "<strong> of the example </strong>";
+ //     if($file){
+  //    echo "<strong> of the example </strong>";
  
-     while(!feof($file)){
-         $line = fgets($file);
-         echo $line. "<br>";
-     }
-     fclose($file);
- }else{
-     echo "Failed to open the file!!<br>";
- }
+     // while(!feof($file)){
+       //   $line = fgets($file);
+          //echo $line. "<br>";
+      //}
+     // fclose($file);
+  //}else{
+    //  echo "Failed to open the file!!<br>";
+ // }
  
- }
+  //}
  
- writeToFile("This is a a simple log message");
- readFromFile();
+  //writeToFile("This is a a simple log message");
+  //readFromFile();
  
 
+// //Setting mySQL database parameters
+// $host = 'localhost';
+// $user = 'root';
+// $pass = '';
 
 
+// //Connection in database using PDO
+
+
+// //Beginning with a try block
+// try{
+//     //Attempting to create a new PDO object and connecting to a MySQL database
+//     //The connection string is constructed using the variables $host, $user, $pass
+
+
+//     $conn =  new PDO("mysql:host=$host", $user, $pass);
+
+
+//     //If the connection is successful, this line will output hte string "Connected!"
+//     echo "Connected";
+
+
+//     //If an exceptions is thrown in the try block, thos catch block will be executed
+//     //The $e variable is instance of the Exception class and contains information 
+//     //about the exception thay was thrown
+// }catch(exception $e){
+//     echo "Not connected";
+// }
+
+
+$host = 'localhost';
+$user = 'root';
+$pass = '';
+
+
+//Connection in database using PDO
+try{
+    $conn =  new PDO("mysql:host=$host", $user, $pass);
+
+
+    $sql = "CREATE DATABASE testdb";
+
+
+    $conn -> exec($sql);
+
+
+    echo "Database is created";
+}catch(exception $e){
+    echo "Database not created, something went wrong!!";
 ?>
