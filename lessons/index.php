@@ -192,23 +192,26 @@
 // }
 
 
-$host = 'localhost';
-$user = 'root';
-$pass = '';
+// $host = 'localhost';
+// $user = 'root';
+// $pass = '';
 
 
-//Connection in database using PDO
-try{
-    $conn =  new PDO("mysql:host=$host", $user, $pass);
+// //Connection in database using PDO
+// try{
+//     $conn =  new PDO("mysql:host=$host", $user, $pass);
 
 
-    $sql = "CREATE DATABASE testdb";
+//     $sql = "CREATE DATABASE testdb";
 
 
-    $conn -> exec($sql);
+//     $conn -> exec($sql);
 
 
-    echo "Database is created";
-}catch(exception $e){
-    echo "Database not created, something went wrong!!";
+//     echo "Database is created";
+// }catch(exception $e){
+//     echo "Database not created, something went wrong!!";
+
+
+
 ?>
