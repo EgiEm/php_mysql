@@ -28,7 +28,7 @@ try{
     $stmt->bindPARAM("password", $hashed_password, PDO::PARAM_STR);
 
     if($stmt->execute()){
-        echo "Signuop succesful!!!";
+        echo "Signup succesful!!!";
 
     }else{
         echo"soemthing went wrong try again!";
